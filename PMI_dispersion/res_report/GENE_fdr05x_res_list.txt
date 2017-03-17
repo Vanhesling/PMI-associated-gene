@@ -1,0 +1,10 @@
+levene_res_Adipose_Subcutaneous_159_144.txt	CLDN2	1.904763e-08	2.859049e-04	1
+levene_res_Adipose_Subcutaneous_159_144.txt	CDH20	2.277665e-07	1.709388e-03	1
+levene_res_Adipose_Subcutaneous_159_144.txt	LRRC15	4.120460e-07	2.061603e-03	0
+levene_res_Adipose_Subcutaneous_159_144.txt	FAM83F	1.708656e-06	6.411732e-03	1
+levene_res_Adipose_Subcutaneous_159_144.txt	CD38	2.723161e-06	8.174929e-03	1
+levene_res_Adipose_Subcutaneous_159_144.txt	KCNA4	5.030124e-06	1.258369e-02	1
+levene_res_Adipose_Subcutaneous_159_144.txt	STAT5A	1.857561e-05	3.983142e-02	1
+levene_res_Adipose_Subcutaneous_159_144.txt	MATN4	2.320978e-05	4.354735e-02	0
+levene_res_Adipose_Subcutaneous_159_144.txt	GPBAR1	2.868442e-05	4.545390e-02	1
+levene_res_Adipose_Subcutaneous_159_144.txt	UBP1	3.028241e-05	4.545390e-02	1
