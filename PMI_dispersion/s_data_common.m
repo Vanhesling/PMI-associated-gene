@@ -13,8 +13,7 @@ tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cerebellum','Esophagus
     load('..\genelist.mat');
 %% Define parameters
     g=genelist;
-    PMI=double(uischtm);
-    
+    PMI=double(uischtm);  
 % filter the lowerly expressed genes (20%)
     isvalid_geneidx=(sum(data==0,2)/size(data,2))<0.5;
     mx=median(data,2);
@@ -25,9 +24,14 @@ tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cerebellum','Esophagus
         if g_idx(kk)
            g_id=[g_id kk];
         end
+<<<<<<< HEAD
     end
 
 % exclude the factors showing a Pearson¡¯s correlation or Spearman¡¯s rank correlation test P-value smaller than 0.05 
+=======
+    end 
+% exclude the factors showing a Pearson's correlation or Spearman's rank correlation test P-value smaller than 0.05 
+>>>>>>> origin/master
     covX=factors(:,6:end);
     Wx=weigthx(:,6:end);
     [~,p1]=corr(covX,PMI,'type','s');

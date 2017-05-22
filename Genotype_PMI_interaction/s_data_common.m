@@ -25,8 +25,12 @@ tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cerebellum','Esophagus
            g_id=[g_id kk];
         end
     end
+<<<<<<< HEAD
 	
 % exclude the factors showing a Pearson¡¯s correlation or Spearman¡¯s rank correlation test P-value smaller than 0.05 
+=======
+% exclude the factors showing a Pearson's correlation or Spearman's rank correlation test P-value smaller than 0.05 
+>>>>>>> origin/master
     covX=factors(:,6:end);
     Wx=weigthx(:,6:end);
     [~,p1]=corr(covX,PMI,'type','s');

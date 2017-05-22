@@ -5,7 +5,7 @@ filelist=dir('../expr*.mat');
 
 for tissueid=1:length(filelist)
     s_data_common;
-%% linear regression
+%% Multiple linear regression
     fid=fopen(['regr_',tissuename,'.txt'],'w');
     disp(['now comes to ',tissuename]);
     for k=1:length(g_id)
