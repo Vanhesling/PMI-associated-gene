@@ -5,7 +5,7 @@ Matlab Codes and sample data for our paper: "Systematic analysis of gene express
 -----------------------------------
 Guidance:
 
-1. Make sure your version of MATLAB is at least 2013.  
+1. Make sure your version of MATLAB software is at least 2013.  
 
 2. Edit file paths (e.g., the HOMEPATH) in the scripts based on your settings.  
 
