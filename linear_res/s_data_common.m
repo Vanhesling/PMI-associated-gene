@@ -4,7 +4,7 @@ tissuename={filelist.name};
 tissuename=strrep(tissuename,'expr_','');
 tissuename=strrep(tissuename,'.mat','');
 tissuename=tissuename{tissueid};
-tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cerebellum','Esophagus','Heart','Lung','Muscle','Nerve','Pituitary','Skin Suprapubic','Skin Lowerleg','Thyroid','Whole Blood'};
+tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cortex','Esophagus','Heart','Lung','Muscle','Nerve','Pituitary','Skin Suprapubic','Skin Lowerleg','Thyroid','Whole Blood'};
 %% loadfile
     load(['..\expr_',tissuename]);
     load(['..\peer_ ',tissuename]);
@@ -33,7 +33,8 @@ tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cerebellum','Esophagus
     ix=p1<0.05|p2<0.05;
     covX(:,ix)=[];
     Wx(:,ix)=[];
-    
+	
+% store the covariates and weights
     covXa=[factors(:,2:5) covX];
     Wxa=[weigthx(:,2:5) Wx];
     covXb=[factors(:,2:4) covX];

@@ -5,7 +5,9 @@ mkdir res_report
 letpaint=false;
 regrlist=dir('regr*.txt');
 cutoff=0.05;
+nperm=10000;
 ctf=num2str(cutoff);
+
 fid3=fopen(['res_report/res_REGRESS_fdr',ctf(3:end),'_genelist.txt'],'w');
 fid4=fopen(['res_report/res_REGRESS_fdr',ctf(3:end),'_summary.txt'],'w');
 
@@ -22,7 +24,7 @@ for tissueid=1:size(regrlist,1);
         % FDR correction
         q=mafdr(p,'BHFDR',true);
         
-        % Get the residual values of the regression 
+        % Get the residual values of PMI-associated gene expression 
         residuals2=residuals';
         for k1=1:size(data,1)
             Y=data(k1,:)';
@@ -45,10 +47,10 @@ for tissueid=1:size(regrlist,1);
         r3=r2(ix);
         q3=q2(ix);
         k3=0;
-        % Permutation test
+        % Do Permutation test
         for k2=1:length(q3)
             Y=residuals2(gid2(k2),:)';
-            for perm=1:10000
+            for perm=1:nperm
             perm_idx=randperm(length(PMI));
             PMIperm(:,perm)=PMI(perm_idx);
             end

@@ -6,8 +6,10 @@ a=dir('res/levene_res_*.txt');
 mkdir res_report
 mkdir img
 fid=fopen('res_report/GENE_fdr05x_res_summary.txt','w');
+
 for k=1:size(a,1) 
     [geneidx,p,p1,p2,r,gene] = importfile(a(k).name);
+%   FDR correction
     q=mafdr(p,'BHFDR',true);
     ix=q<0.05&p2<0.05;
     if ~isempty(ix)
@@ -22,7 +24,7 @@ for k=1:size(a,1)
 end
 fclose(fid);
 
-%% FDR correction and Plot the DV genes
+% FDR correction and Plot the DV genes
 a=dir('res/levene_res_*.txt');
 fid=fopen('res_report/GENE_fdr05x_res_list.txt','w');
 for k=1:size(a,1) 
@@ -63,6 +65,7 @@ for k=1:size(a,1)
 %             xlabel('PMI group (min)','FontSize',12,'FontWeight','bold')
 %             ylabel({gene{j};'residual expression'},'FontSize',12,'FontWeight','bold')
 %             title(tissuetextshort{tissueid},'FontSize',16,'FontWeight','bold')
+
 %             subplot(1,2,2)
 %             plot(PMI,y,'o')
 %             hold on;

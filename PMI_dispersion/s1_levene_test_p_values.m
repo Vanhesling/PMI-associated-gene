@@ -2,7 +2,8 @@ clc
 clear
 fclose all;
 mkdir res
-for tissueid=1:15
+
+for tissueid=1
 %% Define the S-PMI and L-PMI groups     
     s_data_common;
     isPMI=PMI>=median(PMI);
@@ -12,7 +13,9 @@ for tissueid=1:15
     PMIgroup(i(1:round(n/3)))=1;
     PMIgroup(i(end-round(n/3)+1:end))=3;
 %% Levene's test
+
 fid=fopen(sprintf('res/levene_res_%s.txt',tissuename),'w');
+
 for k=1:length(g_id)  
     y1=data(g_id(k),:)';
     W=Wxa(g_id(k),:)';
@@ -23,5 +26,6 @@ for k=1:length(g_id)
     fprintf(fid,'%d\t%e\t%e\t%e\t%d\t%s\n',g_id(k),p1,p2,p3,...
         double(var(Y(PMIgroup==1))>var(Y(PMIgroup==3))),g{g_id(k)});
 end
+
 fclose(fid);
 end
