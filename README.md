@@ -11,11 +11,11 @@ Guidance:
 
 3. Unzip the data.zip. The folder contains all necessary sample data (Adipose_Subcutaneous) for reproducing the results (part 1 and 4) in our paper.  
 
-- genelist.mat --- 18763 Protein Coding Genes
-- expr_Adipose_Subcutaneous_159_144.mat --- Gene expression matrix
-- cov_Adipose_Subcutaneous_159_144.mat --- Covariates
-- peer_Adipose_Subcutaneous_159_144.mat --- PEER algorithm to infer the hidden data structures
-- smpl_Adipose_Subcutaneous_159_144.mat --- Subject-level variables, including age, gender, BMI, etc., and sample-level variable (PMI)
+  -  genelist.mat --- 18763 Protein Coding Genes
+  -  expr_Adipose_Subcutaneous_159_144.mat --- Gene expression matrix
+  -  cov_Adipose_Subcutaneous_159_144.mat --- Covariates
+  -  peer_Adipose_Subcutaneous_159_144.mat --- PEER algorithm to infer the hidden data structures
+  -  smpl_Adipose_Subcutaneous_159_144.mat --- Subject-level variables, including age, gender, BMI, etc., and sample-level variable (PMI)
 
 4. Directly run linear_res/s1_res_regr.m first and then s2_extract_sig_fdr_gene_list.m to identify PMI-associated genes.
 
