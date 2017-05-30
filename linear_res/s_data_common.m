@@ -20,11 +20,13 @@ tissuetextshort={'Adipose','Aorta','Tibial','Cerebellum','Cortex','Esophagus','H
     ishighly_exr=mx>prctile(mx,20);
     g_idx=ishighly_exr&isvalid_geneidx;
     g_id=[];
+    % =============================================================
     for kk=1:length(g) 
         if g_idx(kk)
            g_id=[g_id kk];
         end
     end
+    % =============================================================
 % exclude the factors showing a Pearson¡¯s correlation or Spearman¡¯s rank correlation test P-value smaller than 0.05 
     covX=factors(:,6:end);
     Wx=weigthx(:,6:end);

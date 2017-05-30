@@ -2,20 +2,21 @@ clear
 clc
 fclose all;
 mkdir res_report
+% =============================================================
+
 letpaint=false;
 regrlist=dir('regr*.txt');
 cutoff=0.05;
 nperm=10000;
 ctf=num2str(cutoff);
-
 fid3=fopen(['res_report/res_REGRESS_fdr',ctf(3:end),'_genelist.txt'],'w');
 fid4=fopen(['res_report/res_REGRESS_fdr',ctf(3:end),'_summary.txt'],'w');
 
+% =============================================================
 for tissueid=1:size(regrlist,1);
         disp(['now comes to ',regrlist(tissueid).name]);
         dirname=strrep(regrlist(tissueid).name,'regr_','');
         dirname=strrep(dirname,'.txt','');
-        drimg=['res_report/',dirname,'/img'];
         mkdir(['res_report/',dirname,'/img']);
         fid1=fopen(['res_report/',dirname,'/res_REGRESS_fdr',ctf(3:end),'_genelist.txt'],'w');
         fid2=fopen(['res_report/',dirname,'/res_REGRESS_fdr',ctf(3:end),'_summary.txt'],'w');
@@ -87,3 +88,4 @@ end
 
 fclose(fid3);
 fclose(fid4);
+% =============================================================

@@ -1,12 +1,14 @@
 clear 
 clc
 fclose all;
+% =============================================================
 addpath('res');
 a=dir('res/levene_res_*.txt');
 mkdir res_report
 mkdir img
 fid=fopen('res_report/GENE_fdr05x_res_summary.txt','w');
 
+% =============================================================
 for k=1:size(a,1) 
     [geneidx,p,p1,p2,r,gene] = importfile(a(k).name);
 %   FDR correction
@@ -24,12 +26,8 @@ for k=1:size(a,1)
 end
 fclose(fid);
 
-<<<<<<< HEAD
-% FDR correction and Plot the DV genes
-=======
 %% FDR correction and Plot the DV genes
 
->>>>>>> origin/master
 a=dir('res/levene_res_*.txt');
 fid=fopen('res_report/GENE_fdr05x_res_list.txt','w');
 for k=1:size(a,1) 
@@ -55,8 +53,7 @@ for k=1:size(a,1)
         for j=1:length(q)
             y1=data(geneidx(j),:)';
             W=Wx(geneidx(j),:)';
-            y=y1-covX*W;       
-            
+            y=y1-covX*W;                  
 %             hh=figure('Visible','off');
 %             subplot(1,2,1)
 %             isLPMI=PMI>=median(PMI);
@@ -83,7 +80,6 @@ for k=1:size(a,1)
 %             set(hh, 'PaperPosition', [0.635, 6.35, 25.32, 12.24]);
 %             print(hh,fname,'-dpng','-r1200');
 %             close(hh);    
-
             fprintf(fid,'%s\t%s\t%e\t%e\t%d\n',a(k).name,gene{j},p(j),q(j),r(j));
         end
     end    

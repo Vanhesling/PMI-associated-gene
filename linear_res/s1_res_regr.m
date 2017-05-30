@@ -8,6 +8,7 @@ for tissueid=1:length(filelist)
 %% Multiple linear regression
     fid=fopen(['regr_',tissuename,'.txt'],'w');
     disp(['now comes to ',tissuename]);
+    % =============================================================
     for k=1:length(g_id)
         Y=data(g_id(k),:)';
         pval=fitlm(XX,Y);
@@ -15,6 +16,7 @@ for tissueid=1:length(filelist)
         estimate=pval.Coefficients.Estimate(2);
         fprintf(fid,'%d\t%f\t%e\t%s\n',g_id(k),estimate,pvalue,g{g_id(k)});
     end
+    % =============================================================
     disp(['finish ',tissuename]);
     fclose(fid);
 end

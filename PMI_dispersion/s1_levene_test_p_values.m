@@ -15,7 +15,7 @@ for tissueid=1
 %% Levene's test
 
 fid=fopen(sprintf('res/levene_res_%s.txt',tissuename),'w');
-
+% =============================================================
 for k=1:length(g_id)  
     y1=data(g_id(k),:)';
     W=Wxa(g_id(k),:)';
@@ -26,6 +26,6 @@ for k=1:length(g_id)
     fprintf(fid,'%d\t%e\t%e\t%e\t%d\t%s\n',g_id(k),p1,p2,p3,...
         double(var(Y(PMIgroup==1))>var(Y(PMIgroup==3))),g{g_id(k)});
 end
-
+% =============================================================
 fclose(fid);
 end
