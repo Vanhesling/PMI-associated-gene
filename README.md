@@ -24,6 +24,16 @@ Guidance:
 
 Note that we did not attach the genotype data in the PMI-by-genotype analyses, due to the data privacy of the GTEx project. All the data is available upon request from dbGaP (https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v6.p1).
 
+Citation
+
+A manuscript detailing our work has been accepted by Scientific Reports:
+
+Y. Zhu, Y. Yin and E. Yang (2017) Systematic analysis of gene expression patterns associated with postmortem interval in human tissues (accepted).
+
+
+
+
+
 -----------------------------------
 Contact: zhuyizhang@bjmu.edu.cn  
 
