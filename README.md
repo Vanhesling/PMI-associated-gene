@@ -28,7 +28,7 @@ Note that we did not attach the genotype data in the PMI-by-genotype analyses, d
 
 A manuscript detailing our work has been accepted by Scientific Reports:
 
-Y. Zhu, Y. Yin and E. Yang (2017) Systematic analysis of gene expression patterns associated with postmortem interval in human tissues (accepted).
+Y. Zhu, Y. Yin and E. Yang (2017) Systematic analysis of gene expression patterns associated with postmortem interval in human tissues (http://www.nature.com/articles/s41598-017-05882-0).
 
 
 
